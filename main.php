@@ -12,6 +12,9 @@
 function convertGMT($tz, $time)
 {
 
+    // Inverse timezone to get difference
+    $tz = -$tz;
+
     // Separate hours and minutes
     $hours = intval(explode(":", $time)[0]);
     $minutes = intval(explode(":", $time)[1]);
